@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ package.name }}</h1>
+    <p>{{ package.description }}</p>
+    {% if package.cover_photo %}
+        <img src="{{ package.cover_photo.url }}" alt="{{ package.name }}">
+    {% endif %}
+    <!-- 添加更多Package詳細信息 -->
+{% endblock %}
